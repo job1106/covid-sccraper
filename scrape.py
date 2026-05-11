@@ -38,5 +38,5 @@ df = df[df["continent"] != ""]
 
 # Supabase insert
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
-supabase.table("covid-scrape").insert(data).execute()
+supabase.table("covid").insert(data).execute()
 print(f"✅ Inserted {len(df)} rows into Supabase")
